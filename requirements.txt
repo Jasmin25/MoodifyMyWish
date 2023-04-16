@@ -1,7 +1,5 @@
-fastapi
-uvicorn
-jinja2
-python-multipart
+streamlit
 openai
+pandas
 python-dotenv
-gunicorn
+streamlit-extras
