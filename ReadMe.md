@@ -1,25 +1,10 @@
-# Moodify My Wish
-
-[![Pylint](https://img.shields.io/badge/Pylint%20Score-10%2F10-green)](https://www.pylint.org/)
-[![PEP8](https://img.shields.io/badge/PEP8%20Compliant-Yes-brightgreen)](https://www.python.org/dev/peps/pep-0008/)
-[![Code Coverage](https://img.shields.io/badge/Code%20Coverage-95%25-yellow)](https://coverage.readthedocs.io/)
-
-[![Pylint](https://github.com/Jasmin25/MoodifyMyWish/actions/workflows/pylint.yml/badge.svg)](https://github.com/Jasmin25/MoodifyMyWish/actions/workflows/pylint.yml)
-[![PEP8](https://github.com/Jasmin25/MoodifyMyWish/actions/workflows/pep8.yml/badge.svg)](https://github.com/Jasmin25/MoodifyMyWish/actions/workflows/pep8.yml)
-[![Code Coverage](https://github.com/Jasmin25/MoodifyMyWish/actions/workflows/coverage.yml/badge.svg)](https://github.com/Jasmin25/MoodifyMyWish/actions/workflows/coverage.yml)
-
-![Code Quality](https://raw.githubusercontent.com/Jasmin25/MoodifyMyWish/main/badges/code_quality_badge.svg)
-![Test Coverage](https://raw.githubusercontent.com/Jasmin25/MoodifyMyWish/main/badges/test_coverage_badge.svg)
-![PEP8](https://raw.githubusercontent.com/Jasmin25/MoodifyMyWish/main/badges/pep8_badge.svg)
+# Moodify My Wish: AI Magic for Messages ✨🎉💌
 
 ![Code Quality](https://img.shields.io/badge/dynamic/json?label=Code%20Quality&query=%24.code_quality&url=https%3A%2F%2Fraw.githubusercontent.com%2FJasmin25%2FMoodifyMyWish%2Fmain%2Fbadges%2Fbadge_values.json)
 ![Test Coverage](https://img.shields.io/badge/dynamic/json?label=Test%20Coverage&query=%24.test_coverage&url=https%3A%2F%2Fraw.githubusercontent.com%2FJasmin25%2FMoodifyMyWish%2Fmain%2Fbadges%2Fbadge_values.json)
 ![PEP8 Compliance](https://img.shields.io/badge/dynamic/json?label=PEP8&query=%24.pep8_compliance&url=https%3A%2F%2Fraw.githubusercontent.com%2FJasmin25%2FMoodifyMyWish%2Fmain%2Fbadges%2Fbadge_values.json)
 
-
-
-
-Moodify My Wish is a web application that generates personalized messages based on the occasion, relation, and other details. It is powered by OpenAI's GPT-3.5-turbo language model.
+Discover Moodify My Wish, an innovative web application that harnesses the power of OpenAI's GPT-3.5-turbo language model to generate tailor-made messages based on occasion, relationship, and other crucial details. Explore this GitHub repository and dive into the code behind the scenes, creating personalized and heartfelt wishes with a touch of AI brilliance! 💡
 
 ## Features
 
