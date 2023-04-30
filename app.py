@@ -25,11 +25,16 @@ celebrities_df = pd.read_csv("data/celebrities.csv")
 
 
 def get_options_from_file(filename):
-    """Read the options from a given file."""
-    # Get the path to the data folder
-    data_folder = "data"
+    """
+    Read the options from a given file.
 
-    # Join the folder path and the filename
+    Parameters:
+    filename (str): The name of the file containing the options, located in the 'data' folder.
+
+    Returns:
+    options (list): A list of strings, each representing an option read from the file.
+    """
+    data_folder = "data"
     file_path = os.path.join(data_folder, filename)
 
     with open(file_path, "r", encoding="utf-8") as file:
@@ -38,7 +43,18 @@ def get_options_from_file(filename):
 
 
 def get_input(label, filename=None):
-    """Get input from the user based on the given label and filename."""
+    """
+    Get input from the user based on the given label and filename.
+
+    Parameters:
+    label (str): The label to display next to the input field or select box.
+    filename (str, optional): The name of the file containing the options for the select box.
+                              If not provided, a text input field will be displayed instead.
+
+    Returns:
+    input_value (str): The value entered by the user in the text input field 
+                        or selected from the select box.
+    """
     if filename:
         options = get_options_from_file(filename)
         options.insert(
@@ -48,11 +64,27 @@ def get_input(label, filename=None):
     return st.text_input(label)
 
 
-def get_celebrity_trivia(day, month, celebrities_df):
-    """Get celebrity trivia for a given day and month."""
+def get_celebrity_trivia(day, month, celeb_df):
+    """
+    Get celebrity trivia for a given day and month.
+
+    Parameters:
+    day (int): The day of the month for which to retrieve celebrity trivia.
+    month (int): The month for which to retrieve celebrity trivia.
+    celebrities_df (pandas.DataFrame): A DataFrame containing celebrity data
+                                        with the following columns:
+                                       'day', 'month', 'name', 'birth_year',
+                                       'death_year', 'alive', and 'trivia'.
+
+    Returns:
+    trivia_str (str): A formatted string containing trivia for up to three celebrities 
+                      born on the specified day and month. The celebrities are sorted
+                      by their birth year in descending order. If no celebrities are found,
+                      an empty string is returned.
+    """
     celebs = (
-        celebrities_df[
-            (celebrities_df["day"] == day) & (celebrities_df["month"] == month)
+        celeb_df[
+            (celeb_df["day"] == day) & (celeb_df["month"] == month)
         ]
         .sort_values(by="birth_year", ascending=False)
         .head(3)
@@ -73,7 +105,18 @@ def get_celebrity_trivia(day, month, celebrities_df):
 
 
 def max_days_for_month(month, year):
-    """Return the maximum number of days for a given month and year."""
+    """
+    Return the maximum number of days for a given month and year.
+
+    Parameters:
+    month (int): The month for which to determine the maximum number of days (1-12).
+    year (int, None): The year for which to determine the maximum number of days, 
+                      or None if not applicable.
+
+    Returns:
+    max_days (int): The maximum number of days in the specified month and year.
+                    Takes into account leap years for February.
+    """
     if month == 2:
         if year is not None and calendar.isleap(year):
             return 29
@@ -199,7 +242,9 @@ if generate_button:
     ):
         with st.spinner(f"Crafting your {occasion.lower()} message..."):
             if occasion in ["Birthday", "Anniversary"]:
-                TRIVIA = get_celebrity_trivia(EVENT_DAY, EVENT_MONTH_NUMBER, celebrities_df)
+                TRIVIA = get_celebrity_trivia(
+                    EVENT_DAY, EVENT_MONTH_NUMBER, celebrities_df
+                )
                 TRIVIA_LINE = (
                     "Some TRIVIA of the famous people that share the same"
                     f" {occasion.lower()} date: {TRIVIA}."

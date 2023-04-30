@@ -3,6 +3,15 @@ import pandas as pd
 from app import max_days_for_month, get_celebrity_trivia
 
 def test_max_days_for_month():
+    """
+    Test the max_days_for_month function to ensure it returns the correct maximum number of days for various months and years.
+
+    This function tests:
+    - February in a leap year
+    - February in a non-leap year
+    - Months with 30 days
+    - Months with 31 days
+    """
     # Test for February in a leap year
     assert max_days_for_month(2, 2020) == 29
 
@@ -18,8 +27,15 @@ def test_max_days_for_month():
         assert max_days_for_month(month, 2021) == 31
 
 
+
 def test_get_celebrity_trivia():
-    # Test that the correct trivia is returned for the given date
+    """
+    Test the get_celebrity_trivia function to ensure it returns the correct trivia for a given date.
+
+    This function tests:
+    - The correct trivia is returned for the given date
+    - An empty string is returned if no celebrities are found
+    """
 
     sample_data = {
         "day": [1, 1, 1],
@@ -37,6 +53,7 @@ def test_get_celebrity_trivia():
 
     celebrities_df = pd.DataFrame(sample_data)
 
+    # Test that the correct trivia is returned for the given date
     trivia = get_celebrity_trivia(1, 1, celebrities_df)
     expected_trivia = (
         "Test Celebrity (born 2010, still alive): Sample trivia for Test Celebrity.; "
