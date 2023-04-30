@@ -36,14 +36,10 @@ jobs:
       - name: Run flake8 for PEP8
         run: flake8 app.py --count --statistics --exit-zero > flake8-report.txt
 
-      - name: Create badges
+      - name: Commit and push badge_values.json
         run: |
-          python badges/generate_badges.py > badge_values.txt
-          export CODE_QUALITY=$(grep -oP 'Code Quality: \K\d+' badge_values.txt)
-          export TEST_COVERAGE=$(grep -oP 'Test Coverage: \K\d+' badge_values.txt)
-          export PEP8_COMPLIANCE=$(grep -oP 'PEP8 Compliance: \K\d+' badge_values.txt)
-
-          echo "CODE_QUALITY=$CODE_QUALITY" >> $GITHUB_ENV
-          echo "TEST_COVERAGE=$TEST_COVERAGE" >> $GITHUB_ENV
-          echo "PEP8_COMPLIANCE=$PEP8_COMPLIANCE" >> $GITHUB_ENV
-
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add badges/badge_values.json
+          git commit -m "Update badge_values.json" || exit 0
+          git push
