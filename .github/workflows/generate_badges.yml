@@ -38,7 +38,7 @@ jobs:
 
       - name: Commit and push badge_values.json
         run: |
-          python generate_badges.py
+          python badges/generate_badges.py
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add badges/badge_values.json

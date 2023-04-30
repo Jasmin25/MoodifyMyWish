@@ -52,7 +52,7 @@ def get_input(label, filename=None):
                               If not provided, a text input field will be displayed instead.
 
     Returns:
-    input_value (str): The value entered by the user in the text input field 
+    input_value (str): The value entered by the user in the text input field
                         or selected from the select box.
     """
     if filename:
@@ -77,7 +77,7 @@ def get_celebrity_trivia(day, month, celeb_df):
                                        'death_year', 'alive', and 'trivia'.
 
     Returns:
-    trivia_str (str): A formatted string containing trivia for up to three celebrities 
+    trivia_str (str): A formatted string containing trivia for up to three celebrities
                       born on the specified day and month. The celebrities are sorted
                       by their birth year in descending order. If no celebrities are found,
                       an empty string is returned.
@@ -110,7 +110,7 @@ def max_days_for_month(month, year):
 
     Parameters:
     month (int): The month for which to determine the maximum number of days (1-12).
-    year (int, None): The year for which to determine the maximum number of days, 
+    year (int, None): The year for which to determine the maximum number of days,
                       or None if not applicable.
 
     Returns:
