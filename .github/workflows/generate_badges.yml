@@ -1,0 +1,48 @@
+name: Generate Badges
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  badges:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pylint pytest pytest-cov anybadge flake8
+          pip install -r requirements.txt
+
+      - name: Run pylint
+        run: pylint app.py --exit-zero --output-format=json > pylint-report.json
+
+      - name: Run pytest with coverage
+        run: pytest --cov=app --cov-report=xml --cov-report=term
+
+      - name: Run flake8 for PEP8
+        run: flake8 app.py --count --statistics --exit-zero > flake8-report.txt
+
+      - name: Create badges
+        run: |
+          python generate_badges.py
+
+      - name: Commit and push badges
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add *.svg
+          git commit -m "Update badges" || exit 0
+          git push
