@@ -5,11 +5,17 @@ def create_badge(value, label, filename, thresholds):
     badge = anybadge.Badge(label, value, thresholds=thresholds)
     badge.write_badge(filename)
 
-def get_pylint_score(filename):
-    with open(filename, 'r') as f:
-        pylint_data = json.load(f)
+def get_pylint_score(pylint_report_file):
+    with open(pylint_report_file, 'r') as file:
+        pylint_data = json.load(file)
+
+    if not pylint_data:
+        print('Error: pylint-report.json is empty or has an unexpected format.')
+        return 0
+
     score = pylint_data[0]['score']
     return score
+
 
 def get_test_coverage(filename):
     with open(filename, 'r') as f:
