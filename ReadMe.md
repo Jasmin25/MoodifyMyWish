@@ -1,6 +1,6 @@
 # Moodify My Wish
 
-[![Pylint](https://img.shields.io/badge/Pylint%20Score-9.5%2F10-green)](https://www.pylint.org/)
+[![Pylint](https://img.shields.io/badge/Pylint%20Score-10%2F10-green)](https://www.pylint.org/)
 [![PEP8](https://img.shields.io/badge/PEP8%20Compliant-Yes-brightgreen)](https://www.python.org/dev/peps/pep-0008/)
 [![Code Coverage](https://img.shields.io/badge/Code%20Coverage-95%25-yellow)](https://coverage.readthedocs.io/)
 
@@ -19,40 +19,26 @@ You can access the live demo of Moodify My Wish here: [https://moodifymywish.her
 
 ## Installation
 
-1. Clone the repository:
+1. Clone the repository: ```git clone https://github.com/Jasmin25/MoodifyMyWish.git```
 
-```git clone https://github.com/Jasmin25/MoodifyMyWish.git```
+2. Navigate to the project directory: ```cd MoodifyMyWish```
 
-2. Navigate to the project directory:
-
-```cd MoodifyMyWish```
-
-3. Create a virtual environment:
-
-```python3 -m venv wish_env```
+3. Create a virtual environment: ```python3 -m venv wish_env```
 
 4. Activate the virtual environment:
 
-- On Linux and macOS:
+- On Linux and macOS: ```source venv/bin/activate```
 
-```source venv/bin/activate```
+- On Windows: ```env\Scripts\activate```
 
-- On Windows:
-
-```env\Scripts\activate```
-
-5. Install the required packages:
-
-```pip install -r requirements.txt```
+5. Install the required packages: ```pip install -r requirements.txt```
 
 6. Set up the environment variables:
 
 - Copy the `.env.example` file and rename it to `.env`
 - Fill in the required information (e.g. OpenAI API key)
 
-7. Run the Streamlit app:
-
-```streamlit run app.py```
+7. Run the Streamlit app: ```streamlit run app.py```
 
 The application will be available at http://localhost:8501
 
