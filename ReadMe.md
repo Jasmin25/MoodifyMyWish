@@ -12,9 +12,10 @@
 ![Test Coverage](https://raw.githubusercontent.com/Jasmin25/MoodifyMyWish/main/badges/test_coverage_badge.svg)
 ![PEP8](https://raw.githubusercontent.com/Jasmin25/MoodifyMyWish/main/badges/pep8_badge.svg)
 
-![Code Quality](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/Jasmin25/MoodifyMyWish/main/badge_values.json&label=Code%20Quality&query=$.code_quality&colorB=brightgreen&suffix=%)
-![Test Coverage](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/Jasmin25/MoodifyMyWish/main/badge_values.json&label=Test%20Coverage&query=$.test_coverage&colorB=brightgreen&suffix=%)
-![PEP8 Compliance](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/Jasmin25/MoodifyMyWish/main/badge_values.json&label=PEP8%20Compliance&query=$.pep8_compliance&colorB=brightgreen&suffix=%)
+![Code Quality](https://img.shields.io/badge/dynamic/json?label=Code%20Quality&query=%24.code_quality&url=https%3A%2F%2Fraw.githubusercontent.com%2FJasmin25%2FMoodifyMyWish%2Fmain%2Fbadges%2Fbadge_values.json)
+![Test Coverage](https://img.shields.io/badge/dynamic/json?label=Test%20Coverage&query=%24.test_coverage&url=https%3A%2F%2Fraw.githubusercontent.com%2FJasmin25%2FMoodifyMyWish%2Fmain%2Fbadges%2Fbadge_values.json)
+![PEP8 Compliance](https://img.shields.io/badge/dynamic/json?label=PEP8&query=%24.pep8_compliance&url=https%3A%2F%2Fraw.githubusercontent.com%2FJasmin25%2FMoodifyMyWish%2Fmain%2Fbadges%2Fbadge_values.json)
+
 
 
 
