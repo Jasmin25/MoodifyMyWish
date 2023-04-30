@@ -37,12 +37,12 @@ jobs:
 
       - name: Create badges
         run: |
-          python generate_badges.py
+          python generate_badges.py > badge_values.txt
+          export CODE_QUALITY=$(grep -oP 'Code Quality: \K\d+' badge_values.txt)
+          export TEST_COVERAGE=$(grep -oP 'Test Coverage: \K\d+' badge_values.txt)
+          export PEP8_COMPLIANCE=$(grep -oP 'PEP8 Compliance: \K\d+' badge_values.txt)
 
-      - name: Commit and push badges
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add *.svg
-          git commit -m "Update badges" || exit 0
-          git push
+          echo "CODE_QUALITY=$CODE_QUALITY" >> $GITHUB_ENV
+          echo "TEST_COVERAGE=$TEST_COVERAGE" >> $GITHUB_ENV
+          echo "PEP8_COMPLIANCE=$PEP8_COMPLIANCE" >> $GITHUB_ENV
+

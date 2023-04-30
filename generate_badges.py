@@ -41,19 +41,20 @@ def get_pep8_score(flake8_report_file):
 def main():
 
     pylint_score = get_pylint_score('app.py')
-    print(pylint_score)
     test_coverage = get_test_coverage('coverage.xml')
-    print(test_coverage)
     pep8_compliance = get_pep8_score('flake8-report.txt')
-    print(pep8_compliance)
 
-    code_quality_thresholds = {50: 'red', 70: 'orange', 85: 'yellow', 95: 'green'}
-    test_coverage_thresholds = {50: 'red', 70: 'orange', 85: 'yellow', 95: 'green'}
-    pep8_compliance_thresholds = {2: 'red', 4: 'orange', 6: 'yellow', 8: 'green'}
+    print(f"Code Quality: {pylint_score}")
+    print(f"Test Coverage: {test_coverage}")
+    print(f"PEP8 Compliance: {pep8_compliance}")
 
-    create_badge(pylint_score, 'Code Quality', 'code_quality_badge.svg', code_quality_thresholds)
-    create_badge(test_coverage, 'Test Coverage', 'test_coverage_badge.svg', test_coverage_thresholds)
-    create_badge(pep8_compliance, 'PEP8', 'pep8_badge.svg', pep8_compliance_thresholds)
+    # code_quality_thresholds = {50: 'red', 70: 'orange', 85: 'yellow', 95: 'green'}
+    # test_coverage_thresholds = {50: 'red', 70: 'orange', 85: 'yellow', 95: 'green'}
+    # pep8_compliance_thresholds = {2: 'red', 4: 'orange', 6: 'yellow', 8: 'green'}
+
+    # create_badge(pylint_score, 'Code Quality', 'code_quality_badge.svg', code_quality_thresholds)
+    # create_badge(test_coverage, 'Test Coverage', 'test_coverage_badge.svg', test_coverage_thresholds)
+    # create_badge(pep8_compliance, 'PEP8', 'pep8_badge.svg', pep8_compliance_thresholds)
 
 if __name__ == '__main__':
     main()
