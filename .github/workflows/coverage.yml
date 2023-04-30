@@ -1,0 +1,25 @@
+name: Code Coverage
+
+on: [push, pull_request]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run Code Coverage
+      run: |
+        pip install coverage
+        coverage run --source=./ -m unittest
+        coverage-badge -o coverage.svg

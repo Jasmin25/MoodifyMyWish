@@ -1,0 +1,26 @@
+name: PEP8
+
+on: [push, pull_request]
+
+jobs:
+  pep8:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run PEP8
+      run: |
+        pip install pycodestyle
+        pycodestyle --ignore=E501 app.py > pep8.txt
+        PEP8_BADGE=$(python -c "import sys; sys.exit(0 if 'pep8.txt' not in open('pep8.txt').read() else 1)")
+        echo $PEP8_BADGE

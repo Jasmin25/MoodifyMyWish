@@ -4,6 +4,11 @@
 [![PEP8](https://img.shields.io/badge/PEP8%20Compliant-Yes-brightgreen)](https://www.python.org/dev/peps/pep-0008/)
 [![Code Coverage](https://img.shields.io/badge/Code%20Coverage-95%25-yellow)](https://coverage.readthedocs.io/)
 
+[![Pylint](https://github.com/Jasmin25/MoodifyMyWish/actions/workflows/pylint.yml/badge.svg)](https://github.com/Jasmin25/MoodifyMyWish/actions/workflows/pylint.yml)
+[![PEP8](https://github.com/Jasmin25/MoodifyMyWish/actions/workflows/pep8.yml/badge.svg)](https://github.com/Jasmin25/MoodifyMyWish/actions/workflows/pep8.yml)
+[![Code Coverage](https://github.com/Jasmin25/MoodifyMyWish/actions/workflows/coverage.yml/badge.svg)](https://github.com/Jasmin25/MoodifyMyWish/actions/workflows/coverage.yml)
+
+
 Moodify My Wish is a web application that generates personalized messages based on the occasion, relation, and other details. It is powered by OpenAI's GPT-3.5-turbo language model.
 
 ## Features
