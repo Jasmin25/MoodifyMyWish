@@ -27,8 +27,8 @@ You can access the live demo of Moodify My Wish here: [https://moodifymywish.her
 
 4. Activate the virtual environment:
 
-    - On Linux and macOS: ```source venv/bin/activate```
-    - On Windows: ```env\Scripts\activate```
+    - On Linux and macOS: ```source wish_env/bin/activate```
+    - On Windows: ```wish_env\Scripts\activate```
 
 5. Install the required packages: ```pip install -r requirements.txt```
 
