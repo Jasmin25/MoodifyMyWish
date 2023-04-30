@@ -27,16 +27,15 @@ You can access the live demo of Moodify My Wish here: [https://moodifymywish.her
 
 4. Activate the virtual environment:
 
-- On Linux and macOS: ```source venv/bin/activate```
-
-- On Windows: ```env\Scripts\activate```
+    - On Linux and macOS: ```source venv/bin/activate```
+    - On Windows: ```env\Scripts\activate```
 
 5. Install the required packages: ```pip install -r requirements.txt```
 
 6. Set up the environment variables:
 
-- Copy the `.env.example` file and rename it to `.env`
-- Fill in the required information (e.g. OpenAI API key)
+    - Copy the `.env.example` file and rename it to `.env`
+    - Fill in the required information (e.g. OpenAI API key)
 
 7. Run the Streamlit app: ```streamlit run app.py```
 
