@@ -1,8 +1,8 @@
 # Moodify My Wish: AI Magic for Messages ✨🎉💌
 
-![Code Quality](https://img.shields.io/badge/dynamic/json?label=Code%20Quality&query=%24.code_quality&url=https%3A%2F%2Fraw.githubusercontent.com%2FJasmin25%2FMoodifyMyWish%2Fmain%2Fbadges%2Fbadge_values.json)
-![Test Coverage](https://img.shields.io/badge/dynamic/json?label=Test%20Coverage&query=%24.test_coverage&url=https%3A%2F%2Fraw.githubusercontent.com%2FJasmin25%2FMoodifyMyWish%2Fmain%2Fbadges%2Fbadge_values.json)
-![PEP8 Compliance](https://img.shields.io/badge/dynamic/json?label=PEP8%20Compliance&query=%24.pep8_compliance&url=https%3A%2F%2Fraw.githubusercontent.com%2FJasmin25%2FMoodifyMyWish%2Fmain%2Fbadges%2Fbadge_values.json)
+![Code Quality](https://img.shields.io/badge/dynamic/json?label=Code%20Quality&query=%24.code_quality&url=https%3A%2F%2Fraw.githubusercontent.com%2FJasmin25%2FMoodifyMyWish%2Fmain%2Fbadges%2Fbadge_values.json&color=success)
+![Test Coverage](https://img.shields.io/badge/dynamic/json?label=Test%20Coverage&query=%24.test_coverage&url=https%3A%2F%2Fraw.githubusercontent.com%2FJasmin25%2FMoodifyMyWish%2Fmain%2Fbadges%2Fbadge_values.json&color=success)
+![PEP8 Compliance](https://img.shields.io/badge/dynamic/json?label=PEP8%20Compliance&query=%24.pep8_compliance&url=https%3A%2F%2Fraw.githubusercontent.com%2FJasmin25%2FMoodifyMyWish%2Fmain%2Fbadges%2Fbadge_values.json&color=success)
 
 Discover Moodify My Wish, an innovative web application that harnesses the power of OpenAI's GPT-3.5-turbo language model to generate tailor-made messages based on occasion, relationship, and other crucial details. Explore this GitHub repository and dive into the code behind the scenes, creating personalized and heartfelt wishes with a touch of AI brilliance! 💡
 

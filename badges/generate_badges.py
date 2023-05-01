@@ -59,7 +59,7 @@ def get_pep8_score(flake8_report_file):
     with open(flake8_report_file, "r", encoding="utf-8") as report_file:
         lines = report_file.readlines()
         last_line = lines[-1]
-        total_errors = str(int(last_line.strip())) + " Errors"
+        total_errors = str(int(last_line.strip())) + " Warning/s"
     return total_errors
 
 
