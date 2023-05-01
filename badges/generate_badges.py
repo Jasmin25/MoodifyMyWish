@@ -18,7 +18,7 @@ def get_pylint_score(pylint_target_file):
     float: The pylint score for the target file.
     """
     results = Run([pylint_target_file], do_exit=False)
-    return results.linter.stats.global_note
+    return str(float(results.linter.stats.global_note)) + "/10" 
 
 
 def get_test_coverage(coverage_file):
@@ -43,7 +43,7 @@ def get_test_coverage(coverage_file):
         print("Error: coverage.xml is empty or has an unexpected format.")
         return 0
 
-    return round(coverage_percentage, 2)
+    return str(round(coverage_percentage, 2)) + "%"
 
 
 def get_pep8_score(flake8_report_file):
